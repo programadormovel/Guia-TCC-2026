@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Guia TCC Pizzaria — Mobile</title>
+<style>
+:root{--pizza:#d84315;--pizza2:#ff7043;--bg:#fffaf6;--surface:#fff;--text:#1f1f1f;--muted:#5f6368;--line:#e7ded7;--green:#2e7d32;--blue:#1565c0;--warn:#fff3cd;--radius:18px;--shadow:0 8px 24px rgba(0,0,0,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input{font:inherit}.appbar{position:sticky;top:0;z-index:20;background:linear-gradient(135deg,var(--pizza),var(--pizza2));color:#fff;padding:14px 16px 10px;box-shadow:0 3px 14px rgba(0,0,0,.15)}.appbar h1{margin:0;font-size:1.05rem;line-height:1.25}.appbar p{margin:2px 0 0;font-size:.82rem;opacity:.92}.progress{height:5px;background:rgba(255,255,255,.25);margin:10px -16px -10px}.progress span{display:block;height:5px;background:#ffe082;width:0;transition:.25s}.tabs{position:sticky;top:73px;z-index:19;display:flex;gap:8px;overflow-x:auto;background:#fff;padding:10px 12px;border-bottom:1px solid var(--line);scroll-snap-type:x mandatory}.tabs::-webkit-scrollbar{display:none}.tab{flex:0 0 auto;scroll-snap-align:start;border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:999px;padding:9px 13px;font-size:.86rem;font-weight:750;min-height:42px}.tab.active{background:var(--pizza);border-color:var(--pizza);color:#fff}main{width:min(980px,100%);margin:0 auto;padding:14px}.section{display:none}.section.active{display:block}.hero{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;margin-bottom:14px;box-shadow:var(--shadow)}.hero h2{margin:0 0 6px;font-size:1.35rem;line-height:1.25}.hero p{margin:0;color:var(--muted)}.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px;margin:14px 0;box-shadow:var(--shadow)}.card h3{margin:0 0 8px;font-size:1.05rem}.card h4{margin:14px 0 6px}.pill{display:inline-block;border-radius:999px;background:#fff0eb;color:#9e2d04;font-weight:800;font-size:.75rem;padding:4px 9px;margin:2px}.grid{display:grid;grid-template-columns:1fr;gap:10px}.mini{border:1px dashed var(--line);border-radius:14px;padding:12px;background:#fff}.ok{border-left:5px solid var(--green)}.blue{border-left:5px solid var(--blue)}.warn{background:var(--warn);border-left:5px solid #f9a825}.flow{display:grid;gap:8px;text-align:center}.box{border-radius:14px;padding:12px;border:1px solid var(--line);background:#fff;font-weight:800}.box.react{border-color:#ffab91;background:#fff3ee}.box.spring{border-color:#a5d6a7;background:#f1f8e9}.box.db{border-color:#90caf9;background:#e3f2fd}.arrow{color:var(--muted);font-weight:900}.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px}table{width:100%;border-collapse:collapse;min-width:520px;background:#fff}th,td{padding:10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{background:#faf7f2}.step{display:flex;gap:12px;margin:14px 0}.num{flex:0 0 34px;height:34px;border-radius:50%;background:var(--pizza);color:#fff;display:grid;place-items:center;font-weight:900}.step>div:last-child{min-width:0}.code{margin:12px 0;border-radius:14px;overflow:hidden;background:#15151f}.code-head{display:flex;align-items:center;justify-content:space-between;gap:8px;background:#242435;color:#fff;padding:9px 10px}.code-head small{font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.copy{border:1px solid #64647c;background:transparent;color:#fff;border-radius:10px;padding:6px 9px;font-size:.78rem}.copy.done{border-color:#81c784;color:#a5d6a7}pre{margin:0;padding:13px;overflow:auto;color:#e8e8f0;font:13px/1.55 ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace;tab-size:2}code{background:#f1ece8;border-radius:6px;padding:1px 5px}.code code{background:transparent;color:inherit;padding:0}.accordion{border:1px solid var(--line);border-radius:var(--radius);background:#fff;margin:12px 0;overflow:hidden;box-shadow:var(--shadow)}.acc-btn{width:100%;border:0;background:#fff;text-align:left;padding:15px;display:flex;justify-content:space-between;gap:8px;font-weight:850}.acc-body{display:none;border-top:1px solid var(--line);padding:15px}.accordion.open .acc-body{display:block}.accordion.open .chev{transform:rotate(180deg)}.chev{transition:.2s}.check{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:12px}.check:hover{background:#faf7f2}.check input{margin-top:4px;width:20px;height:20px;accent-color:var(--pizza);flex:0 0 auto}.check.done span{text-decoration:line-through;color:var(--muted)}.bottom{position:sticky;bottom:0;background:rgba(255,250,246,.94);backdrop-filter:blur(8px);padding:10px 14px;border-top:1px solid var(--line);display:flex;gap:8px}.navbtn{flex:1;border:1px solid var(--line);background:#fff;border-radius:14px;padding:11px 10px;font-weight:850}.navbtn.primary{background:var(--pizza);border-color:var(--pizza);color:#fff}.note{font-size:.92rem;color:var(--muted)}ul{padding-left:22px}li{margin:5px 0}@media(min-width:720px){main{padding:22px}.grid.two{grid-template-columns:repeat(2,1fr)}.grid.three{grid-template-columns:repeat(3,1fr)}.tabs{top:76px}.hero h2{font-size:1.7rem}pre{font-size:14px}}@media(max-width:430px){body{font-size:15px}.appbar{padding-left:max(14px,env(safe-area-inset-left));padding-right:max(14px,env(safe-area-inset-right))}.tabs{top:72px}.hero,.card{padding:14px;border-radius:15px}.tab{font-size:.8rem;padding:8px 11px}.bottom{padding-bottom:max(10px,env(safe-area-inset-bottom))}pre{font-size:12px}.step{gap:9px}.num{flex-basis:30px;height:30px}}
+</style>
+</head>
+<body>
+<header class="appbar"><h1>🍕 Guia TCC Pizzaria — React + Spring Boot</h1><p>Material didático responsivo para estudo no celular</p><div class="progress"><span id="progressFill"></span></div></header>
+<nav class="tabs" aria-label="Seções do guia">
+<button class="tab active" data-tab="0">🏠 Início</button><button class="tab" data-tab="1">⚛️ Frontend</button><button class="tab" data-tab="2">📦 Bibliotecas</button><button class="tab" data-tab="3">☕ Backend</button><button class="tab" data-tab="4">🗄️ Banco</button><button class="tab" data-tab="5">✅ Checklist</button>
+</nav>
+<main>
+<section class="section active" id="tab0"><div class="hero"><h2>Objetivo do projeto</h2><p>Construir um sistema de pizzaria com login, cardápio, carrinho e pedido, integrando React + Vite, Spring Boot e SQL Server.</p></div><div class="card warn"><h3>Como usar no celular</h3><ul><li>Deslize as abas superiores para navegar.</li><li>Abra cada bloco de conteúdo por etapas.</li><li>Use o botão <strong>copiar</strong> nos códigos.</li><li>Marque o checklist para acompanhar seu progresso.</li></ul></div><div class="card"><h3>Arquitetura do sistema</h3><div class="flow"><div class="box react">Frontend React + Vite<br><small>porta 5173</small></div><div class="arrow">↓ REST API / JSON / JWT</div><div class="box spring">Backend Spring Boot Java<br><small>porta 8080</small></div><div class="arrow">↓ JPA / JDBC</div><div class="box db">SQL Server<br><small>porta 1433</small></div></div></div><div class="card"><h3>Mapa de aprendizagem</h3><div class="grid three"><div class="mini"><strong>1. Frontend</strong><br>Projeto Vite, rotas, páginas e serviços.</div><div class="mini"><strong>2. Backend</strong><br>API REST, controllers, services e repositories.</div><div class="mini"><strong>3. Banco</strong><br>Tabelas, relacionamentos e dados de exemplo.</div></div></div></section>
+<section class="section" id="tab1"><div class="hero"><h2>Frontend React + Vite</h2><p>Criação do projeto, estrutura de pastas e primeiras páginas.</p></div><div class="card"><h3>Passo a passo inicial</h3><div class="step"><div class="num">1</div><div><strong>Criar o projeto</strong><div class="code"><div class="code-head"><small>terminal</small><button class="copy">copiar</button></div><pre><code>npm create vite@latest pizzaria-frontend -- --template react
+cd pizzaria-frontend
+npm install</code></pre></div></div></div><div class="step"><div class="num">2</div><div><strong>Instalar bibliotecas</strong><div class="code"><div class="code-head"><small>terminal</small><button class="copy">copiar</button></div><pre><code>npm install bootstrap react-bootstrap react-router-dom react-hook-form axios</code></pre></div></div></div><div class="step"><div class="num">3</div><div><strong>Executar</strong><div class="code"><div class="code-head"><small>terminal</small><button class="copy">copiar</button></div><pre><code>npm run dev
+# abrir no navegador: http://localhost:5173</code></pre></div></div></div></div><div class="card"><h3>Estrutura recomendada</h3><div class="code"><div class="code-head"><small>pizzaria-frontend</small><button class="copy">copiar</button></div><pre><code>src/
+├── components/       # Navbar, CardProduto
+├── pages/            # LoginPage, MenuPage, PedidoPage
+├── services/         # api.js, authService.js
+├── context/          # AuthContext.jsx
+├── App.jsx           # rotas
+└── main.jsx          # entrada do React</code></pre></div><p class="note">Separar por responsabilidade facilita manutenção, correção de erros e apresentação do TCC.</p></div><div class="accordion"><button class="acc-btn">Arquivo main.jsx <span class="chev">⌄</span></button><div class="acc-body"><p><strong>Objetivo:</strong> iniciar a aplicação React e importar o Bootstrap.</p><div class="code"><div class="code-head"><small>src/main.jsx</small><button class="copy">copiar</button></div><pre><code>import 'bootstrap/dist/css/bootstrap.min.css'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  &lt;React.StrictMode&gt;
+    &lt;App /&gt;
+  &lt;/React.StrictMode&gt;
+)</code></pre></div></div></div><div class="accordion"><button class="acc-btn">Arquivo App.jsx com rotas <span class="chev">⌄</span></button><div class="acc-body"><p><strong>Objetivo:</strong> definir as telas acessadas pela URL.</p><div class="code"><div class="code-head"><small>src/App.jsx</small><button class="copy">copiar</button></div><pre><code>import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import LoginPage from './pages/LoginPage'
+import MenuPage from './pages/MenuPage'
+import PedidoPage from './pages/PedidoPage'
+
+function App() {
+  return (
+    &lt;BrowserRouter&gt;
+      &lt;Routes&gt;
+        &lt;Route path="/" element={&lt;Navigate to="/login" /&gt;} /&gt;
+        &lt;Route path="/login" element={&lt;LoginPage /&gt;} /&gt;
+        &lt;Route path="/menu" element={&lt;MenuPage /&gt;} /&gt;
+        &lt;Route path="/pedido" element={&lt;PedidoPage /&gt;} /&gt;
+      &lt;/Routes&gt;
+    &lt;/BrowserRouter&gt;
+  )
+}
+export default App</code></pre></div></div></div></section>
+<section class="section" id="tab2"><div class="hero"><h2>Bibliotecas do Frontend</h2><p>O que cada biblioteca faz dentro do projeto.</p></div><div class="grid two"><div class="card ok"><h3>React Router DOM</h3><p>Controla a navegação entre páginas sem recarregar o site.</p><span class="pill">BrowserRouter</span><span class="pill">Routes</span><span class="pill">Route</span><span class="pill">useNavigate</span></div><div class="card ok"><h3>React Hook Form</h3><p>Gerencia formulários com menos re-renderizações e validações simples.</p><span class="pill">useForm</span><span class="pill">register</span><span class="pill">handleSubmit</span><span class="pill">errors</span></div><div class="card blue"><h3>Axios</h3><p>Realiza requisições HTTP para o backend Spring Boot.</p><span class="pill">get</span><span class="pill">post</span><span class="pill">interceptors</span></div><div class="card blue"><h3>React-Bootstrap</h3><p>Oferece componentes prontos e responsivos para a interface.</p><span class="pill">Container</span><span class="pill">Card</span><span class="pill">Form</span><span class="pill">Button</span></div></div><div class="accordion"><button class="acc-btn">Serviço Axios com token JWT <span class="chev">⌄</span></button><div class="acc-body"><div class="code"><div class="code-head"><small>src/services/api.js</small><button class="copy">copiar</button></div><pre><code>import axios from 'axios'
+
+const api = axios.create({
+  baseURL: 'http://localhost:8080/api',
+  headers: { 'Content-Type': 'application/json' }
+})
+
+api.interceptors.request.use((config) =&gt; {
+  const token = localStorage.getItem('token')
+  if (token) config.headers.Authorization = `Bearer ${token}`
+  return config
+})
+
+export default api</code></pre></div></div></div><div class="accordion"><button class="acc-btn">Serviço de autenticação e produtos <span class="chev">⌄</span></button><div class="acc-body"><div class="code"><div class="code-head"><small>src/services/authService.js</small><button class="copy">copiar</button></div><pre><code>import api from './api'
+
+export async function login(email, senha) {
+  const response = await api.post('/auth/login', { email, senha })
+  return response.data
+}
+
+export async function getProdutos() {
+  const response = await api.get('/produtos')
+  return response.data
+}</code></pre></div></div></div></section>
+<section class="section" id="tab3"><div class="hero"><h2>Backend Spring Boot</h2><p>API REST organizada em camadas.</p></div><div class="card"><h3>Configuração no Spring Initializr</h3><div class="table-wrap"><table><tr><th>Campo</th><th>Valor</th></tr><tr><td>Project</td><td>Maven</td></tr><tr><td>Language</td><td>Java</td></tr><tr><td>Spring Boot</td><td>3.x estável</td></tr><tr><td>Java</td><td>17 ou 21</td></tr><tr><td>Dependências</td><td>Web, JPA, Security, Validation, Lombok, SQL Server Driver</td></tr></table></div></div><div class="card"><h3>Organização do backend</h3><div class="code"><div class="code-head"><small>src/main/java/com/pizzaria</small><button class="copy">copiar</button></div><pre><code>controller/    # recebe requisições HTTP
+service/       # regras de negócio
+repository/    # acesso ao banco
+entity/        # tabelas mapeadas com JPA
+dto/           # dados de entrada e saída
+config/        # segurança, CORS e JWT</code></pre></div></div><div class="accordion"><button class="acc-btn">application.properties <span class="chev">⌄</span></button><div class="acc-body"><div class="code"><div class="code-head"><small>src/main/resources/application.properties</small><button class="copy">copiar</button></div><pre><code>spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=pizzaria_db;encrypt=false
+spring.datasource.username=sa
+spring.datasource.password=SuaSenha@123
+spring.datasource.driver-class-name=com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+spring.jpa.database-platform=org.hibernate.dialect.SQLServerDialect
+spring.jpa.hibernate.ddl-auto=validate
+spring.jpa.show-sql=true
+server.port=8080</code></pre></div><p class="note">Em produção, a senha não deve ficar fixa no arquivo. Para o TCC local, use apenas ambiente controlado.</p></div></div><div class="accordion"><button class="acc-btn">Exemplo de entidade Produto <span class="chev">⌄</span></button><div class="acc-body"><div class="code"><div class="code-head"><small>Produto.java</small><button class="copy">copiar</button></div><pre><code>@Entity
+@Table(name = "Produto")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Produto {
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Integer id;
+
+  @NotBlank(message = "Nome obrigatório")
+  private String nome;
+
+  private String descricao;
+
+  @NotNull(message = "Preço obrigatório")
+  @Positive(message = "Preço deve ser positivo")
+  private BigDecimal preco;
+
+  private Boolean ativo = true;
+}</code></pre></div></div></div></section>
+<section class="section" id="tab4"><div class="hero"><h2>Banco SQL Server</h2><p>Script base com usuários, produtos, pedidos e itens do pedido.</p></div><div class="card"><h3>Relacionamentos</h3><ul><li><strong>Usuario</strong> faz vários pedidos.</li><li><strong>Pedido</strong> possui vários itens.</li><li><strong>ItemPedido</strong> liga pedido e produto.</li><li><strong>Produto</strong> pode aparecer em vários pedidos.</li></ul></div><div class="accordion open"><button class="acc-btn">Script SQL completo <span class="chev">⌄</span></button><div class="acc-body"><div class="code"><div class="code-head"><small>pizzaria_db.sql</small><button class="copy">copiar</button></div><pre><code>CREATE DATABASE pizzaria_db;
+GO
+USE pizzaria_db;
+GO
+
+CREATE TABLE Usuario (
+  id INT IDENTITY(1,1) PRIMARY KEY,
+  nome NVARCHAR(100) NOT NULL,
+  email NVARCHAR(150) NOT NULL UNIQUE,
+  senha NVARCHAR(255) NOT NULL,
+  perfil NVARCHAR(10) NOT NULL CHECK (perfil IN ('ADMIN','CLIENTE')),
+  ativo BIT NOT NULL DEFAULT 1,
+  criado_em DATETIME DEFAULT GETDATE()
+);
+
+CREATE TABLE Produto (
+  id INT IDENTITY(1,1) PRIMARY KEY,
+  nome NVARCHAR(100) NOT NULL,
+  descricao NVARCHAR(255),
+  preco DECIMAL(8,2) NOT NULL,
+  ativo BIT NOT NULL DEFAULT 1
+);
+
+CREATE TABLE Pedido (
+  id INT IDENTITY(1,1) PRIMARY KEY,
+  status NVARCHAR(20) NOT NULL DEFAULT 'AGUARDANDO'
+    CHECK (status IN ('AGUARDANDO','PREPARO','ENTREGA','ENTREGUE')),
+  total DECIMAL(10,2) NOT NULL DEFAULT 0,
+  criado_em DATETIME DEFAULT GETDATE(),
+  usuario_id INT NOT NULL,
+  FOREIGN KEY (usuario_id) REFERENCES Usuario(id)
+);
+
+CREATE TABLE ItemPedido (
+  id INT IDENTITY(1,1) PRIMARY KEY,
+  quantidade INT NOT NULL,
+  preco_unit DECIMAL(8,2) NOT NULL,
+  pedido_id INT NOT NULL,
+  produto_id INT NOT NULL,
+  FOREIGN KEY (pedido_id) REFERENCES Pedido(id),
+  FOREIGN KEY (produto_id) REFERENCES Produto(id)
+);
+
+INSERT INTO Produto (nome, descricao, preco) VALUES
+('Margherita','Molho de tomate, mussarela e manjericão',39.90),
+('Calabresa','Molho de tomate, mussarela e calabresa',42.90),
+('Frango Catupiry','Frango desfiado com catupiry',45.90),
+('Quatro Queijos','Mussarela, provolone, parmesão e catupiry',47.90),
+('Coca-Cola 2L','Refrigerante gelado',9.90);
+GO</code></pre></div></div></div></section>
+<section class="section" id="tab5"><div class="hero"><h2>Checklist de entrega</h2><p>Marque as etapas concluídas. O progresso fica salvo neste navegador.</p></div><div class="card"><h3>Banco de dados</h3><div id="check-db"></div></div><div class="card"><h3>Backend</h3><div id="check-back"></div></div><div class="card"><h3>Frontend</h3><div id="check-front"></div></div><div class="card"><h3>Integração</h3><div id="check-int"></div></div><button class="navbtn" onclick="resetChecks()">Reiniciar checklist</button></section>
+</main>
+<div class="bottom"><button class="navbtn" id="prevBtn">◀ Voltar</button><button class="navbtn primary" id="nextBtn">Próximo ▶</button></div>
+<script>
+const tabs=[...document.querySelectorAll('.tab')], sections=[...document.querySelectorAll('.section')];let current=0;
+function showTab(i){current=Math.max(0,Math.min(i,sections.length-1));tabs.forEach((t,idx)=>t.classList.toggle('active',idx===current));sections.forEach((s,idx)=>s.classList.toggle('active',idx===current));tabs[current].scrollIntoView({inline:'center',block:'nearest'});updateProgress();window.scrollTo({top:0,behavior:'smooth'});}tabs.forEach(t=>t.addEventListener('click',()=>showTab(+t.dataset.tab)));document.getElementById('prevBtn').onclick=()=>showTab(current-1);document.getElementById('nextBtn').onclick=()=>showTab(current+1);
+document.querySelectorAll('.accordion .acc-btn').forEach(btn=>btn.addEventListener('click',()=>btn.parentElement.classList.toggle('open')));
+document.querySelectorAll('.copy').forEach(btn=>btn.addEventListener('click',async()=>{const code=btn.closest('.code').querySelector('pre').innerText;await navigator.clipboard.writeText(code);btn.textContent='copiado';btn.classList.add('done');setTimeout(()=>{btn.textContent='copiar';btn.classList.remove('done')},1400)}));
+const tasks={
+'check-db':['SQL Server instalado','Banco pizzaria_db criado','Tabelas criadas','Produtos de exemplo inseridos'],
+'check-back':['Projeto Spring criado','application.properties configurado','Entidades criadas','Repositories criados','Services implementados','Controllers REST criados','CORS configurado'],
+'check-front':['Projeto Vite criado','Bibliotecas instaladas','Rotas configuradas','Serviço Axios criado','Login implementado','Menu implementado','Pedido implementado'],
+'check-int':['Frontend acessa backend','Login retorna token','Menu carrega produtos','Pedido calcula total','Fluxo completo testado']
+};
+function renderChecks(){const saved=JSON.parse(localStorage.getItem('tcc_pizzaria_checks')||'{}');Object.entries(tasks).forEach(([id,items])=>{const el=document.getElementById(id);el.innerHTML='';items.forEach((txt,i)=>{const key=id+'_'+i;const row=document.createElement('label');row.className='check'+(saved[key]?' done':'');row.innerHTML=`<input type="checkbox" ${saved[key]?'checked':''}><span>${txt}</span>`;row.querySelector('input').addEventListener('change',e=>{const s=JSON.parse(localStorage.getItem('tcc_pizzaria_checks')||'{}');s[key]=e.target.checked;localStorage.setItem('tcc_pizzaria_checks',JSON.stringify(s));row.classList.toggle('done',e.target.checked);updateProgress();});el.appendChild(row);});});updateProgress();}
+function updateProgress(){const saved=JSON.parse(localStorage.getItem('tcc_pizzaria_checks')||'{}');const total=Object.values(tasks).flat().length;const done=Object.values(saved).filter(Boolean).length;const tabPct=((current+1)/sections.length)*35;const checkPct=total?done/total*65:0;document.getElementById('progressFill').style.width=Math.round(tabPct+checkPct)+'%';document.getElementById('prevBtn').disabled=current===0;document.getElementById('nextBtn').disabled=current===sections.length-1;}
+function resetChecks(){if(confirm('Reiniciar o checklist?')){localStorage.removeItem('tcc_pizzaria_checks');renderChecks();}}
+renderChecks();
+</script>
+</body>
+</html>
